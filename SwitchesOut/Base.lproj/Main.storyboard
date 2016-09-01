@@ -1,25 +1,498 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwitchesOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ah2-Jo-Whn">
+                                <rect key="frame" x="55" y="226" width="265" height="215"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7kq-sE-vOD">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-j1-YiQ" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="index">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="iKq-JM-3W1"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lw4-yr-04r" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="mwD-CM-3d6"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5El-8b-5jV" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="k1N-mv-pbi"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMw-wx-UiS" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="pGk-fh-ssh"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oas-LU-dFe" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="hgP-5N-J2U"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Opj-Bc-MXA">
+                                        <rect key="frame" x="0.0" y="46" width="265" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDE-z9-Ui8" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="9r1-J7-zmC"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9nQ-6I-aeQ" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="DPH-Hq-O4z"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBE-Cg-O6t" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="c6I-Dc-Awz"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-MI-Z8u" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bnf-xX-hSy"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="edV-Zs-NBV" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="f8f-WK-mqj"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2sP-yh-8c2">
+                                        <rect key="frame" x="0.0" y="92" width="265" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-f5-thY" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="TeW-SY-fW5"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="czm-9A-jTN" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="nDd-1l-QMq"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NbZ-Xm-PYY" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="wW3-i1-vOw"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bCw-oP-Tch" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="4wG-jj-UZ0"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f79-qT-Kaz" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="BCh-db-dzV"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sNO-dm-yy9">
+                                        <rect key="frame" x="0.0" y="138" width="265" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-xf-YbA" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="amE-dk-swy"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qk-8X-m61" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qdy-Ms-tMC"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-mR-7z5" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="fQz-hE-L55"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-2F-Ju1" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="vEh-wv-sQZ"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2V-qW-cG8" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="JGi-37-ig1"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9sS-iV-8Fy">
+                                        <rect key="frame" x="0.0" y="184" width="265" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Waf-CE-SgL" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="mj8-0x-DHQ"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-xF-JEB" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="N2f-N8-9Zs"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-aV-uOO" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bce-pq-W5D"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-dD-LRQ" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="7Xu-em-Ewz"/>
+                                                </connections>
+                                            </switch>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxd-eR-bva" customClass="LightSwitch" customModule="SwitchesOut" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="row">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="column">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="lightSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="Yfh-eI-SKj"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p56-Cg-Qt5">
+                                <rect key="frame" x="138" y="580" width="98" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="Fau-KZ-TQR"/>
+                                    <constraint firstAttribute="height" constant="35" id="Jiw-q4-3uX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4v-gm-dEU"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWE-HH-iuu">
+                                <rect key="frame" x="110" y="99" width="154" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="UB6-o8-D86"/>
+                                    <constraint firstAttribute="width" constant="154" id="gkl-8f-yS4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="p56-Cg-Qt5" secondAttribute="bottom" constant="50" id="8X4-7F-dSv"/>
+                            <constraint firstItem="Ah2-Jo-Whn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FAd-DU-rua"/>
+                            <constraint firstItem="p56-Cg-Qt5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFj-uZ-m7O"/>
+                            <constraint firstItem="Ah2-Jo-Whn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eOK-7m-rnF"/>
+                            <constraint firstItem="mWE-HH-iuu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="g6F-24-H9D"/>
+                            <constraint firstItem="mWE-HH-iuu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xkg-h4-RWx"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="winnerLabel" destination="mWE-HH-iuu" id="TAF-m0-XsK"/>
+                        <outletCollection property="lightSwitches" destination="k9W-j1-YiQ" collectionClass="NSMutableArray" id="3hU-Cz-zaa"/>
+                        <outletCollection property="lightSwitches" destination="Lw4-yr-04r" collectionClass="NSMutableArray" id="dEM-JH-7mY"/>
+                        <outletCollection property="lightSwitches" destination="5El-8b-5jV" collectionClass="NSMutableArray" id="KWY-bw-Onb"/>
+                        <outletCollection property="lightSwitches" destination="GMw-wx-UiS" collectionClass="NSMutableArray" id="AHv-nj-cCn"/>
+                        <outletCollection property="lightSwitches" destination="oas-LU-dFe" collectionClass="NSMutableArray" id="wr0-Rc-R5O"/>
+                        <outletCollection property="lightSwitches" destination="oDE-z9-Ui8" collectionClass="NSMutableArray" id="wsi-wf-bpW"/>
+                        <outletCollection property="lightSwitches" destination="9nQ-6I-aeQ" collectionClass="NSMutableArray" id="4Gg-4K-WtQ"/>
+                        <outletCollection property="lightSwitches" destination="QBE-Cg-O6t" collectionClass="NSMutableArray" id="OuF-lJ-WNb"/>
+                        <outletCollection property="lightSwitches" destination="1fM-MI-Z8u" collectionClass="NSMutableArray" id="nQc-25-BYb"/>
+                        <outletCollection property="lightSwitches" destination="edV-Zs-NBV" collectionClass="NSMutableArray" id="u0Q-TJ-g7G"/>
+                        <outletCollection property="lightSwitches" destination="Cwn-f5-thY" collectionClass="NSMutableArray" id="ZZt-dE-ZXI"/>
+                        <outletCollection property="lightSwitches" destination="czm-9A-jTN" collectionClass="NSMutableArray" id="5eX-be-LsU"/>
+                        <outletCollection property="lightSwitches" destination="NbZ-Xm-PYY" collectionClass="NSMutableArray" id="Abt-ON-hij"/>
+                        <outletCollection property="lightSwitches" destination="bCw-oP-Tch" collectionClass="NSMutableArray" id="b8W-Sv-Xlw"/>
+                        <outletCollection property="lightSwitches" destination="f79-qT-Kaz" collectionClass="NSMutableArray" id="CNd-kl-qCN"/>
+                        <outletCollection property="lightSwitches" destination="IUF-xf-YbA" collectionClass="NSMutableArray" id="aBd-nd-xhH"/>
+                        <outletCollection property="lightSwitches" destination="9qk-8X-m61" collectionClass="NSMutableArray" id="qbS-X6-RMO"/>
+                        <outletCollection property="lightSwitches" destination="mg0-mR-7z5" collectionClass="NSMutableArray" id="hIQ-Hw-IPc"/>
+                        <outletCollection property="lightSwitches" destination="KlO-2F-Ju1" collectionClass="NSMutableArray" id="KPD-02-7OX"/>
+                        <outletCollection property="lightSwitches" destination="E2V-qW-cG8" collectionClass="NSMutableArray" id="N6n-7q-1YW"/>
+                        <outletCollection property="lightSwitches" destination="Waf-CE-SgL" collectionClass="NSMutableArray" id="UJI-kk-5Ug"/>
+                        <outletCollection property="lightSwitches" destination="ooZ-xF-JEB" collectionClass="NSMutableArray" id="s8Q-fs-i2g"/>
+                        <outletCollection property="lightSwitches" destination="f2U-aV-uOO" collectionClass="NSMutableArray" id="5YV-dL-eXF"/>
+                        <outletCollection property="lightSwitches" destination="Dd3-dD-LRQ" collectionClass="NSMutableArray" id="4gq-eE-iKe"/>
+                        <outletCollection property="lightSwitches" destination="Lxd-eR-bva" collectionClass="NSMutableArray" id="Mmk-IR-8gn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="459.5" y="386.5"/>
         </scene>
     </scenes>
 </document>
